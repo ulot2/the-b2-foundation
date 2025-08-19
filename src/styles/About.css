@@ -35,8 +35,13 @@
   justify-content: space-between;
   align-items: center;
   gap: 3rem;              /* 48px */
+  /* margin: 0 auto 7rem auto; */
   margin: 0 auto;
 }
+
+/* div.about-details:first-of-type {
+  background-color: red;
+} */
 
 .about-details {
     flex: 1;
@@ -87,7 +92,7 @@
 }
 
 .item {
-    border: 2px solid #f4f4f4;
+    border: 1px solid #d1d3d7;
     margin-bottom: 1rem;
     padding: 1rem;
     border-radius: 1rem;
