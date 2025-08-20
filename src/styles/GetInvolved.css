@@ -1,11 +1,11 @@
 .getInvolved {
-    background-color: #f4f4f4;
-    padding-top: 5rem;
-    padding-bottom: 5rem;
+  background-color: #f4f4f4;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
 }
 
 .container {
-    width: 100%;
+  width: 100%;
   max-width: 900px;
   margin: 0 auto;
   padding-left: 1rem;
@@ -13,21 +13,21 @@
 }
 
 .header {
-    text-align: center;
-    margin-bottom: 3rem;
+  text-align: center;
+  margin-bottom: 3rem;
 }
 
 .header h1 {
-   font-size: 1.875rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
+  font-size: 1.875rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
 }
 
 .header p {
-    max-width: 42rem;
-    margin: 0 auto;
-    color: #6b7280;
-    font-size: 1.125rem;
+  max-width: 42rem;
+  margin: 0 auto;
+  color: #6b7280;
+  font-size: 1.125rem;
 }
 
 .get-involved-details {
@@ -45,52 +45,101 @@
 .get-involved-item:nth-child(4),
 .get-involved-item:nth-child(5),
 .get-involved-item:nth-child(6) {
-  width: 35%;
-  height: 32%;
+  width: 37%;
+  height: 43%;
   /* flex-grow: ;
   flex-shrink: ; */
   order: 1;
 }
 
 .get-involved-item {
-    border: 1px solid #d1d3d7;
-    margin-bottom: 1rem;
-    padding: 1rem;
-    border-radius: 1rem;
-    transition: box-shadow 0.3s ease-in-out;
+  border: 1px solid #d1d3d7;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  transition: box-shadow 0.3s ease-in-out;
 }
 
 .get-involved-item:hover {
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
-              0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
 
 .get-icon {
-    font-size: 2rem;
+  font-size: 2rem;
 }
 
 .get-involved-item h1 {
-    font-weight: 300;
-    font-size: 1.4rem;
-    margin: 0.6rem 0 0.6rem 0;
+  font-weight: 300;
+  font-size: 1.2rem;
+  margin: 0.6rem 0 0.6rem 0;
 }
 
 .get-involved-item p {
-    color: #6b7280;
-    margin-bottom: 1rem;
+  color: #6b7280;
+  margin-bottom: 1rem;
+  font-size: 0.8rem;
 }
 
 .get-involved-item button {
-    width: 100%;
-    border: 1px solid #d1d3d7;
-    background: none;
-    padding: 0.5rem;
-    margin-bottom: 0.5rem;
-    border-radius: 0.5rem;
-    cursor: pointer;
-    transition: 0.3s ease-in-out;
+  width: 100%;
+  border: 1px solid #d1d3d7;
+  background: none;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
 }
 
 .get-involved-item button:hover {
+  background-color: #e9ebef;
+}
+
+.take-action {
+    background-color: #f0fdf4;
+    width: 76%;
+    margin: 2rem auto 0 auto;
+    text-align: center;
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+
+.take-action h1 {
+    font-size: 1.2rem;
+    margin-bottom: 0.7rem;
+}
+
+.take-action p {
+    font-size: 0.9rem;
+    color: #717182;
+    margin-bottom: 1rem;
+}
+
+.take-action button {
+    /*  */
+    padding: 0.6rem;
+    border: none;
+    border-radius: 0.5rem;
+    margin-right: 0.6rem;
+     cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.take-action button:first-of-type {
+    background-color: #16a34a;
+    color: #fff;
+}
+
+.take-action button:last-of-type {
+    background-color: transparent;
+  border: 1px solid #d1d3d7;
+
+}
+
+.take-action button:first-of-type:hover {
+    background-color: #008236;
+}
+.take-action button:last-of-type:hover {
     background-color: #e9ebef;
 }

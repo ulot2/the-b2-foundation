@@ -4,6 +4,7 @@ import { Hero } from "./components/Hero";
 import Navbar from "./components/navBar";
 import { About } from "./components/About";
 import { GetInvolved } from "./components/GetInvolved";
+import { Community } from "./components/Community";
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
     <Hero />
     <About />
     <GetInvolved />
+    <Community />
     </>
   );
 }
