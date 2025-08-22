@@ -60,8 +60,8 @@ export const About = () => {
   }, []);
 
   return (
-    <section id="about" className="about">
-      <div className="about-container">
+    <section id="about" className="general-box">
+      <div className="general-container">
         <div className="about-header">
           <h1>About B2 Foundation</h1>
           <p>

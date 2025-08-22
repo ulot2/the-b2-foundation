@@ -9,3 +9,16 @@ body {
   padding: 0;
   margin: 0;
 }
+
+.general-box {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.general-container {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}

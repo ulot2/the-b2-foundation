@@ -60,8 +60,8 @@ export const GetInvolved = () => {
     },
   ];
   return (
-    <section id="getInvolved" className="getInvolved">
-      <div className="container">
+    <section id="getInvolved" className="general-box getInvolved">
+      <div className="general-container">
         <div className="header">
           <h1>Get Involved</h1>
           <p>
