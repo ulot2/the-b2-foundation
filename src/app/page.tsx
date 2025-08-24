@@ -6,6 +6,7 @@ import { About } from "./components/About";
 import { GetInvolved } from "./components/GetInvolved";
 import { Community } from "./components/Community";
 import { Questions } from "./components/Questions";
+import { Team } from "./components/Team";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
     <GetInvolved />
     <Community />
     <Questions />
+    <Team />
     </>
   );
 }
