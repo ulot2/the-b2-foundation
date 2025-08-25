@@ -1,0 +1,104 @@
+.contact {
+    background-color: #f4f4f4;
+}
+
+.contact-header {
+    text-align: center;
+}
+
+.contact-header h1 {
+    font-size: 1.875rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.contact-header p {
+    font-size: 1rem;
+    color: #6b7280;
+    font-weight: 300;
+    margin: 0 auto 2rem auto;
+    width: 70%;
+}
+
+.contact-methods {
+    display: flex;
+    gap: 10%;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.contact-methods div {
+    text-align: center;
+}
+
+.contact-icon-container {
+    background-color: #000;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    border-radius: 100%;
+    margin-bottom: 0.5rem;
+}
+
+.contact-icon {
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+.contact-methods div h4 {
+    font-size: 1rem;
+    margin-bottom: 0.3rem;
+}
+
+.contact-methods div p {
+    font-size: 0.9rem;
+    color: #6b7280;
+    margin-bottom: 0.3rem;
+}
+
+.contact-link {
+    color: #000;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: text-decoration 0.3s ease-in-out;
+}
+
+.contact-link:hover {
+    text-decoration: underline;
+}
+
+.socials {
+    display: flex;
+    gap: 4%;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.socials div {
+    text-align: center;
+}
+
+.social-link {
+    color: #000;
+    text-decoration: none;
+}
+
+.social-link h5 {
+    margin: 0.5rem 0;
+    font-weight: 600;
+}
+
+.social-link p {
+    font-size: 0.85rem;
+    color: #6b7280;
+}
+
+.socials div:hover .contact-icon-container {
+  transform: scale(1.1); /* Example effect */
+  transition: 0.3s ease;
+}

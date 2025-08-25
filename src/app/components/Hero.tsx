@@ -12,10 +12,8 @@ export const Hero = () => {
       setScrollY(window.scrollY);
     };
 
-    // Add scroll event listener
     window.addEventListener("scroll", handleScroll, { passive: true });
 
-    // Cleanup
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
