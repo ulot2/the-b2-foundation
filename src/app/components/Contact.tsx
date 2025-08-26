@@ -77,8 +77,13 @@ export const Contact = () => {
             </div>
           ))}
         </div>
-        <div className="socials">
-          {socials.map((social, index) => (
+        <div>
+            <div className="social-header">
+                <h4>Follow our social media</h4>
+                <p>Stay updated on our latest environmental initiatives, cleanup events, and community impact stories.</p>
+            </div>
+          <div className="socials">
+            {socials.map((social, index) => (
             <div key={index}>
               <Link href={social.href} className="social-link">
                 <div className="contact-icon-container">
@@ -89,6 +94,7 @@ export const Contact = () => {
               </Link>
             </div>
           ))}
+          </div>
         </div>
       </div>
     </section>

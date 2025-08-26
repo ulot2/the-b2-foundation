@@ -1,5 +1,6 @@
 .contact {
     background-color: #f4f4f4;
+    min-height: 100vh;
 }
 
 .contact-header {
@@ -69,6 +70,24 @@
 
 .contact-link:hover {
     text-decoration: underline;
+}
+
+.social-header {
+    margin: 2rem 0 2rem 0;
+    text-align: center;
+}
+
+.social-header h4 {
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+}
+
+.social-header p {
+    font-size: 0.8rem;
+    color: #6b7280;
+    font-weight: 300;
+    margin: 0.5rem auto 2rem auto;
+    width: 70%;
 }
 
 .socials {
