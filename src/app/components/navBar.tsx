@@ -117,7 +117,7 @@ export function Navbar() {
     handleScroll();
 
     return () => window.removeEventListener("scroll", throttledHandleScroll);
-  }, [navItems]);
+  }, []);
 
   // Handle escape key to close mobile menu
   useEffect(() => {

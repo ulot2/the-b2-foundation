@@ -92,7 +92,7 @@ export const About = () => {
         </div>
         <div className="about-mission-container">
           <div className="about-mission-header">
-            <p>what we're making possible</p>
+            <p>{"what we're making possible"}</p>
             <h1>Small actions, big environmental impact</h1>
           </div>
           <div className="about-mission">
