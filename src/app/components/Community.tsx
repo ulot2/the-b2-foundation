@@ -31,7 +31,7 @@ export const Community = () => {
   ];
 
   return (
-    <section className="general-box">
+    <section className="general-box" id="community">
       <div className="general-container">
         <div className="community-header">
           <h6>VOICES FROM OUR COMMUNITY</h6>

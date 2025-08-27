@@ -59,3 +59,10 @@
 .community-details-item div span {
     font-size: 0.85rem;
 }
+
+/* Mobile devices (up to 767px) */
+@media (max-width: 767px) {
+  .community-details-item {
+    width: 100% !important;
+  }
+}

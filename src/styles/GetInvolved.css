@@ -133,3 +133,14 @@
 .take-action button:last-of-type:hover {
     background-color: #e9ebef;
 }
+
+/* Mobile devices (up to 767px) */
+@media (max-width: 767px) {
+  .get-involved-item {
+    width: 100% !important;
+  }
+
+  .take-action {
+    width: 100%;
+  }
+}

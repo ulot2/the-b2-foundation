@@ -22,14 +22,7 @@
   text-align: center;
 }
 
-.team-item:nth-child(1),
-.team-item:nth-child(2),
-.team-item:nth-child(3),
-.team-item:nth-child(4),
-.team-item:nth-child(5),
-.team-item:nth-child(6),
-.team-item:nth-child(7),
-.team-item:nth-child(8) {
+.team-item {
   width: 23.5%;
   height: 23.5%;
   margin-bottom: 1rem;
@@ -48,4 +41,16 @@
     font-size: 0.85rem;
     color: #6b7280;
     margin-bottom: 0.5rem;
+}
+
+/* Mobile devices (up to 767px) */
+@media (max-width: 767px) {
+    .team-header h1 {
+        font-size: 1.5rem;
+    }
+
+  .team-item {
+  width: 40%;
+  margin: 0 auto 1rem auto;
+}
 }

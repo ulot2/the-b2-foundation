@@ -22,3 +22,12 @@ body {
   padding-left: 1rem;
   padding-right: 1rem;
 }
+
+@media (max-width: 767px) {
+  /* Your mobile styles here */
+  /* .general-container {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    max-width: 350px;
+  } */
+}

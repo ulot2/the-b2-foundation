@@ -125,3 +125,26 @@
     background-color: #e9ebef;
     border-radius: 10px;
 }
+
+/* Mobile devices (up to 767px) */
+@media (max-width: 767px) {
+  .questions-flex {
+    flex-direction: column;
+  }
+
+  .questions-header {
+    margin-bottom: 2rem;
+  }
+
+  .prevention-container {
+    flex-direction: column;
+  }
+
+  .prevention-tips {
+    width: 100%;
+}
+
+.research {
+    width: 100%;
+}
+}

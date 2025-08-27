@@ -55,7 +55,7 @@ export const Contact = () => {
   ];
 
   return (
-    <section className="general-box contact">
+    <section className="general-box contact" id="contact">
       <div className="general-container">
         <div className="contact-header">
           <h1>Contact Us</h1>

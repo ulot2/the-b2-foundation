@@ -142,3 +142,31 @@
 .footer-copyright-text {
     color: #9ca3af;
 }
+
+/* Mobile devices (up to 767px) */
+@media (max-width: 767px) {
+  .footer-top {
+      flex-direction: column;
+      gap: 2rem;
+  }
+
+  .footer-head {
+    width: 100%;
+  }
+
+  .footer-links-section {
+    width: 45% !important;
+  }
+
+  .newsletter {
+    flex-direction: column;
+  }
+
+  .newsletter div:first-of-type {
+    margin-bottom: 2rem;
+  }
+
+  .footer-newsletter-input {
+    width: 100%;
+  }
+}

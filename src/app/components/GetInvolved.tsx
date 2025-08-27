@@ -60,7 +60,7 @@ export const GetInvolved = () => {
     },
   ];
   return (
-    <section id="getInvolved" className="general-box getInvolved">
+    <section id="get-involved" className="general-box getInvolved">
       <div className="general-container">
         <div className="header">
           <h1>Get Involved</h1>

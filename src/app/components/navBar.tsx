@@ -1,177 +1,214 @@
-"use client"
-import { useState } from 'react';
-import Link from 'next/link';
-import styles from '@/styles/Navbar.module.css';
-import { GoFile } from "react-icons/go";
+"use client";
+import { useState, useEffect } from "react";
+import "@/styles/Navbar.css";
+import { IoIosMenu } from "react-icons/io";
+import { IoCloseOutline } from "react-icons/io5";
 
-const Navbar = () => {
-  const [isProgramsOpen, setIsProgramsOpen] = useState(false);
-  const [isSupportOpen, setIsSupportOpen] = useState(false);
+export function Navbar() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("");
+  const [isScrolled, setIsScrolled] = useState(false);
 
-  const programsDropdownItems = [
-    {
-      category: 'TAKE ACTION',
-      items: [
-        {
-          title: 'Community Cleanups',
-          description: 'Help clean up and protect local spaces with your neighbors.',
-          icon: '📋'
-        },
-        {
-          title: 'Education',
-          description: 'Explore workshops and resources to spark change in your area.',
-          icon: '📚'
-        },
-        {
-          title: 'Advocacy',
-          description: 'Champion policies and spread awareness for a cleaner future.',
-          icon: '📢'
-        }
-      ]
-    },
-    {
-      category: 'GET INVOLVED',
-      items: [
-        {
-          title: 'Volunteer',
-          description: 'Pitch in and see the difference you can make.',
-          icon: '🤝'
-        },
-        {
-          title: 'Events',
-          description: 'Join events and meet others passionate about our planet.',
-          icon: '📅'
-        },
-        {
-          title: 'Partnerships',
-          description: 'Team up with us to grow your impact.',
-          icon: '🤝'
-        }
-      ]
-    },
-    {
-      category: 'RESOURCES',
-      items: [
-        {
-          title: 'Toolkits',
-          description: 'Find guides and tools to lead local projects.',
-          icon: '🛠️'
-        },
-        {
-          title: 'Stories',
-          description: 'Be inspired by real stories of positive change.',
-          icon: '📖'
-        },
-        {
-          title: 'FAQs',
-          description: 'Answers to your questions about our mission.',
-          icon: '❓'
-        }
-      ]
+  const navItems = [
+    { href: "#about", label: "About", id: "about" },
+    { href: "#get-involved", label: "Get Involved", id: "get-involved" },
+    { href: "#community", label: "Community", id: "community" },
+    { href: "#faq", label: "FAQ", id: "faq" },
+    { href: "#team", label: "Team", id: "team" },
+    { href: "#contact", label: "Contact", id: "contact" },
+  ];
+
+  const handleSmoothScroll = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    targetId: string
+  ) => {
+    e.preventDefault();
+    const targetElement = document.getElementById(targetId);
+
+    if (targetElement) {
+      const headerOffset = 80;
+      const elementPosition = targetElement.getBoundingClientRect().top;
+      const offsetPosition =
+        elementPosition + window.pageYOffset - headerOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
     }
-  ];
 
-  const supportDropdownItems = [
-    { title: 'Help Center', href: '/help' },
-    { title: 'Contact Us', href: '/contact' },
-    { title: 'Documentation', href: '/docs' },
-    { title: 'Community Forum', href: '/forum' }
-  ];
+    // Close mobile menu after clicking
+    setIsMenuOpen(false);
+  };
+
+  // Handle logo click - scroll to top
+  const handleLogoClick = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+    setIsMenuOpen(false);
+  };
+
+  // Handle donation button click
+  const handleDonateClick = () => {
+    const contactSection = document.getElementById("contact");
+    if (contactSection) {
+      const headerOffset = 80;
+      const elementPosition = contactSection.getBoundingClientRect().top;
+      const offsetPosition =
+        elementPosition + window.pageYOffset - headerOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
+    }
+    setIsMenuOpen(false);
+  };
+
+  // Track scroll position and active section
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      setIsScrolled(scrollPosition > 50);
+
+      // Determine active section based on scroll position
+      const sections = navItems.map((item) => item.id);
+      let currentSection = "";
+
+      // Check each section to see which one is currently in view
+      for (const sectionId of sections) {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          const rect = element.getBoundingClientRect();
+          const threshold = window.innerHeight * 0.3; // 30% of viewport
+
+          if (rect.top <= threshold && rect.bottom >= threshold) {
+            currentSection = sectionId;
+            break;
+          }
+        }
+      }
+
+      // If we're at the very top, clear active section
+      if (scrollPosition < 100) {
+        currentSection = "";
+      }
+
+      setActiveSection(currentSection);
+    };
+
+    // Throttle scroll events for performance
+    let ticking = false;
+    const throttledHandleScroll = () => {
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          handleScroll();
+          ticking = false;
+        });
+        ticking = true;
+      }
+    };
+
+    window.addEventListener("scroll", throttledHandleScroll, { passive: true });
+
+    // Initial call to set correct state
+    handleScroll();
+
+    return () => window.removeEventListener("scroll", throttledHandleScroll);
+  }, [navItems]);
+
+  // Handle escape key to close mobile menu
+  useEffect(() => {
+    const handleEscape = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        setIsMenuOpen(false);
+      }
+    };
+
+    if (isMenuOpen) {
+      document.addEventListener("keydown", handleEscape);
+      return () => document.removeEventListener("keydown", handleEscape);
+    }
+  }, [isMenuOpen]);
 
   return (
-    <nav className={styles.navbar}>
-      <div className={styles.container}>
-        {/* Logo */}
-        <Link href="/" className={styles.logo}>
-          <div className={styles.logoIcon}>✦</div>
-          <span>THE B2 FOUNDATION</span>
-        </Link>
-
-        {/* Navigation Links */}
-        <div className={styles.navLinks}>
-          <div 
-            className={styles.dropdown}
-            onClick={() => setIsProgramsOpen(true)}
-            onMouseLeave={() => setIsProgramsOpen(false)}
-          >
-            <button className={`${styles.dropdownTrigger} ${styles.navLink}`}>
-              Programs
-              <svg className={styles.chevron} viewBox="0 0 20 20" fill="currentColor">
-                <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
-              </svg>
-            </button>
-            
-              {
-                isProgramsOpen && (<div className={styles.megaDropdown}>
-                <div className={styles.dropdownContent}>
-                  {programsDropdownItems.map((category, categoryIndex) => (
-                    <div key={categoryIndex} className={styles.dropdownCategory}>
-                      <h4 className={styles.categoryTitle}>{category.category}</h4>
-                      {category.items.map((item, itemIndex) => (
-                        <Link key={itemIndex} href="#" className={styles.dropdownItem}>
-                          <div className={styles.itemIcon}><GoFile /></div>
-                          <div className={styles.itemContent}>
-                            <h5 className={styles.itemTitle}>{item.title}</h5>
-                            <p className={styles.itemDescription}>{item.description}</p>
-                          </div>
-                        </Link>
-                      ))}
-                    </div>
-                  ))}
-                </div>
-                
-                <div className={styles.ctaSection}>
-                  <div className={styles.ctaContent}>
-                    <h3>Cleaner communities, brighter futures</h3>
-                    <p>Join a welcoming movement making real change for our environment—one step at a time.</p>
-                    <button className={styles.ctaButton}>
-                      Get started →
-                    </button>
-                  </div>
-                </div>
-              </div>)
-              }
+    <nav
+      className={`nav-container ${isScrolled ? "scrolled" : "not-scrolled"}`}
+    >
+      <div className="nav-content">
+        <div className="nav-logo" onClick={handleLogoClick}>
+          <div className="nav-logo-icon">
+            <span className="text-white font-bold">🌱</span>
           </div>
-
-          <Link href="/about" className={styles.navLink}>
-            About
-          </Link>
-          
-          <Link href="/blog" className={styles.navLink}>
-            Blog
-          </Link>
-          
-          <div 
-            className={styles.dropdown}
-            onClick={() => setIsSupportOpen(true)}
-            onMouseLeave={() => setIsSupportOpen(false)}
-          >
-            <button className={styles.dropdownTrigger}>
-              Support
-              <svg className={styles.chevron} viewBox="0 0 20 20" fill="currentColor">
-                <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
-              </svg>
-            </button>
-            
-            {isSupportOpen && (
-              <div className={styles.simpleDropdown}>
-                {supportDropdownItems.map((item, index) => (
-                  <Link key={index} href={item.href} className={styles.simpleDropdownItem}>
-                    {item.title}
-                  </Link>
-                ))}
-              </div>
-            )}
-          </div>
+          <span className="nav-logo-text">Clean Community</span>
         </div>
 
-        {/* Donate Button */}
-        <Link href="/donate" className={styles.donateButton}>
-          Donate
-        </Link>
+        {/* Desktop Navigation */}
+        <div className="nav-desktop">
+          {navItems.map((item) => (
+            <a
+              key={item.href}
+              href={item.href}
+              onClick={(e) => handleSmoothScroll(e, item.id)}
+              className={`nav-link ${
+                activeSection === item.id ? "active" : ""
+              }`}
+            >
+              {item.label}
+            </a>
+          ))}
+          <button className="nav-donate-button" onClick={handleDonateClick}>
+            Donate
+          </button>
+        </div>
+
+        {/* Mobile menu button */}
+        <button
+          className="nav-mobile-toggle"
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          aria-label="Toggle navigation menu"
+          aria-expanded={isMenuOpen}
+        >
+          <div className="nav-mobile-icon">
+            <IoIosMenu
+              className={`icon ${isMenuOpen ? "menu-hidden" : "menu-visible"}`}
+            />
+            <IoCloseOutline
+              className={`icon ${
+                isMenuOpen ? "close-visible" : "close-hidden"
+              }`}
+            />
+          </div>
+        </button>
+      </div>
+
+      {/* Mobile Navigation */}
+      <div className={`nav-mobile-menu ${isMenuOpen ? "open" : "closed"}`}>
+        <div className="nav-mobile-content">
+          {navItems.map((item, index) => (
+            <a
+              key={item.href}
+              href={item.href}
+              onClick={(e) => handleSmoothScroll(e, item.id)}
+              className={`nav-mobile-link ${
+                activeSection === item.id ? "active" : ""
+              }`}
+              style={{ animationDelay: `${index * 50}ms` }}
+            >
+              {item.label}
+            </a>
+          ))}
+          <button
+            className="nav-mobile-donate"
+            onClick={handleDonateClick}
+            style={{ animationDelay: `${navItems.length * 50}ms` }}
+          >
+            Donate
+          </button>
+        </div>
       </div>
     </nav>
   );
-};
-
-export default Navbar;
+}

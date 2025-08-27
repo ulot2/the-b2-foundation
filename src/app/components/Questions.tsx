@@ -54,7 +54,7 @@ export const Questions = () => {
     },
   ];
   return (
-    <section className="general-box questions">
+    <section className="general-box questions" id="faq">
       <div className="general-container questions-container">
         <div className="questions-flex">
           <div className="questions-header">

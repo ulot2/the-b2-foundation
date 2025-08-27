@@ -121,3 +121,15 @@
   transform: scale(1.1); /* Example effect */
   transition: 0.3s ease;
 }
+
+/* Mobile devices (up to 767px) */
+@media (max-width: 767px) {
+
+    .social-header p {
+    margin-bottom: 0.5rem !important;
+    
+}
+  .contact-icon-container {
+    margin-top: 1rem;
+  }
+}
