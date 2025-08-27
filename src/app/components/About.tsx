@@ -74,17 +74,10 @@ export const About = () => {
           <div className="about-details">
             <h1>Our Mission</h1>
             <p>
-              Litter is more than just an eyesore – it's a serious environmental
-              threat that affects wildlife, pollutes our waterways, and damages
-              the health of our communities. Our foundation works tirelessly to
-              raise awareness about these impacts and provide practical
-              solutions for individuals and communities to make a difference.
+              Litter is more than just an eyesore - it's a serious environmental threat that affects wildlife, pollutes our waterways, and damages the health of our communities. Our foundation works tirelessly to raise awareness about these impacts and provide practical solutions for individuals and communities to make a difference.
             </p>
             <p>
-              Through education, community outreach, and action-oriented
-              programs, we're building a movement of environmentally conscious
-              citizens committed to keeping our planet clean for future
-              generations.
+              {"Through education, community outreach, and action-oriented programs, we're building a movement of environmentally conscious citizens committed to keeping our planet clean for future generations."}
             </p>
           </div>
           <div className="about-details">

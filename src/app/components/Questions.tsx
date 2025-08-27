@@ -89,8 +89,7 @@ export const Questions = () => {
           <div className="research">
             <h1>Research & Studies</h1>
             <p>
-              Stay informed with the latest research on litter's environmental
-              impact and the effectiveness of prevention strategies.
+              {"Stay informed with the latest research on litter's environmental impact and the effectiveness of prevention strategies."}
             </p>
             <div>
               <h6>Ocean Plastic Report 2024</h6>

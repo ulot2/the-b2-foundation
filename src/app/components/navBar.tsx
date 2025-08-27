@@ -4,12 +4,7 @@ import "@/styles/Navbar.css";
 import { IoIosMenu } from "react-icons/io";
 import { IoCloseOutline } from "react-icons/io5";
 
-export function Navbar() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [activeSection, setActiveSection] = useState("");
-  const [isScrolled, setIsScrolled] = useState(false);
-
-  const navItems = [
+const navItems = [
     { href: "#about", label: "About", id: "about" },
     { href: "#get-involved", label: "Get Involved", id: "get-involved" },
     { href: "#community", label: "Community", id: "community" },
@@ -17,6 +12,11 @@ export function Navbar() {
     { href: "#team", label: "Team", id: "team" },
     { href: "#contact", label: "Contact", id: "contact" },
   ];
+
+export function Navbar() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("");
+  const [isScrolled, setIsScrolled] = useState(false);
 
   const handleSmoothScroll = (
     e: React.MouseEvent<HTMLAnchorElement>,
