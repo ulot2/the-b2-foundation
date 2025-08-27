@@ -7,7 +7,6 @@ import { FaInstagram } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { FiLinkedin } from "react-icons/fi";
 import Link from "next/link";
-import { text } from "stream/consumers";
 
 export const Contact = () => {
   const contacts = [

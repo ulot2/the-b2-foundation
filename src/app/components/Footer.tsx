@@ -51,9 +51,7 @@ export const Footer = () => {
           <div className="footer-head">
             <h1>THE B2 FOUNDATION</h1>
             <p>
-              A foundation dedicated to raising awareness about litter's impact
-              on our environment and empowering communities to create positive
-              change.
+              {"A foundation dedicated to raising awareness about litter's impact on our environment and empowering communities to create positive change."}
             </p>
             <div className="footer-social">
               {socialLinks.map((social, index) => (
