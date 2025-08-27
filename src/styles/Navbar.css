@@ -1,5 +1,6 @@
 .nav-container {
   position: fixed;
+  width: 100%;
   top: 0;
   left: 0;
   right: 0;
@@ -26,7 +27,7 @@
   justify-content: space-between;
   height: 4rem;
   padding: 0 1rem;
-  max-width: 1200px;
+  max-width: 900px;
   margin: 0 auto;
 }
 
