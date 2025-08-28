@@ -11,6 +11,7 @@
     font-size: 1.875rem;
     font-weight: 700;
     margin-bottom: 1rem;
+    color: #012d12;
 }
 
 .contact-header p {
@@ -33,7 +34,7 @@
 }
 
 .contact-icon-container {
-    background-color: #000;
+    background-color: #012d12;
     width: 2.5rem;
     height: 2.5rem;
     display: flex;
@@ -46,12 +47,13 @@
 
 .contact-icon {
     font-size: 1.2rem;
-    color: #fff;
+    color: #8ba72c;
 }
 
 .contact-methods div h4 {
     font-size: 1rem;
     margin-bottom: 0.3rem;
+    color: #273617;
 }
 
 .contact-methods div p {

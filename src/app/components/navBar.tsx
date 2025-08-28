@@ -3,15 +3,16 @@ import { useState, useEffect } from "react";
 import "@/styles/Navbar.css";
 import { IoIosMenu } from "react-icons/io";
 import { IoCloseOutline } from "react-icons/io5";
+import Image from "next/image";
 
 const navItems = [
-    { href: "#about", label: "About", id: "about" },
-    { href: "#get-involved", label: "Get Involved", id: "get-involved" },
-    { href: "#community", label: "Community", id: "community" },
-    { href: "#faq", label: "FAQ", id: "faq" },
-    { href: "#team", label: "Team", id: "team" },
-    { href: "#contact", label: "Contact", id: "contact" },
-  ];
+  { href: "#about", label: "About", id: "about" },
+  { href: "#get-involved", label: "Get Involved", id: "get-involved" },
+  { href: "#community", label: "Community", id: "community" },
+  { href: "#faq", label: "FAQ", id: "faq" },
+  { href: "#team", label: "Team", id: "team" },
+  { href: "#contact", label: "Contact", id: "contact" },
+];
 
 export function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -140,12 +141,12 @@ export function Navbar() {
       <div className="nav-content">
         <div className="nav-logo" onClick={handleLogoClick}>
           <div className="nav-logo-icon">
-            <span className="text-white font-bold">🌱</span>
+            <Image src="/images/Logo.png" alt="logo image" width={40} height={40} />
           </div>
-          <span className="nav-logo-text">Clean Community</span>
+          <span className="nav-logo-text">THE B2 FOUNDATION</span>
         </div>
 
-        {/* Desktop Navigation */}
+        {/* Desktop Navigation*/}
         <div className="nav-desktop">
           {navItems.map((item) => (
             <a

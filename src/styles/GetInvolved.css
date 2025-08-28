@@ -11,6 +11,7 @@
   font-size: 1.875rem;
   font-weight: 700;
   margin-bottom: 1rem;
+  color: #012d12;
 }
 
 .header p {
@@ -43,7 +44,7 @@
 }
 
 .get-involved-item {
-  border: 1px solid #d1d3d7;
+  border: 1px solid #8ba72c;
   margin-bottom: 1rem;
   padding: 1rem;
   border-radius: 1rem;
@@ -63,6 +64,7 @@
   font-weight: 300;
   font-size: 1.2rem;
   margin: 0.6rem 0 0.6rem 0;
+  color: #012d12;
 }
 
 .get-involved-item p {
@@ -73,7 +75,7 @@
 
 .get-involved-item button {
   width: 100%;
-  border: 1px solid #d1d3d7;
+  border: 1px solid #8ba72c;
   background: none;
   padding: 0.5rem;
   margin-bottom: 0.5rem;
@@ -87,7 +89,7 @@
 }
 
 .take-action {
-    background-color: #f0fdf4;
+    background-color: #273617;
     width: 76%;
     margin: 2rem auto 0 auto;
     text-align: center;
@@ -98,11 +100,12 @@
 .take-action h1 {
     font-size: 1.2rem;
     margin-bottom: 0.7rem;
+    color: #bc6c25;
 }
 
 .take-action p {
     font-size: 0.9rem;
-    color: #717182;
+    color: #fff;
     margin-bottom: 1rem;
 }
 
@@ -117,18 +120,19 @@
 }
 
 .take-action button:first-of-type {
-    background-color: #16a34a;
+    background-color: #bc6c25;
     color: #fff;
 }
 
 .take-action button:last-of-type {
     background-color: transparent;
-  border: 1px solid #d1d3d7;
+  border: 1px solid #8ba72c;
+  color: #bc6c25;
 
 }
 
 .take-action button:first-of-type:hover {
-    background-color: #008236;
+    background-color: #012d12;
 }
 .take-action button:last-of-type:hover {
     background-color: #e9ebef;

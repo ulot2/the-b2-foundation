@@ -6,6 +6,7 @@ import { FaXTwitter } from "react-icons/fa6";
 import { FiLinkedin } from "react-icons/fi";
 import { AiOutlineMail } from "react-icons/ai";
 import Link from "next/link";
+import Image from "next/image";
 
 export const Footer = () => {
   const footerLinks = {
@@ -49,7 +50,10 @@ export const Footer = () => {
       <div className="general-container">
         <div className="footer-top">
           <div className="footer-head">
-            <h1>THE B2 FOUNDATION</h1>
+            <div>
+              <Image src="/images/Logo.png" alt="logo image" width={50} height={50} />
+              <h1>THE B2 FOUNDATION</h1>
+            </div>
             <p>
               {"A foundation dedicated to raising awareness about litter's impact on our environment and empowering communities to create positive change."}
             </p>

@@ -1,5 +1,5 @@
 .footer {
-    background-color: #101828;
+    background: linear-gradient(135deg, #012d12, #273617);
 }
 
 .footer-top {
@@ -12,10 +12,17 @@
     width: 70%;
 }
 
+.footer-head div:first-of-type {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2%;
+  margin-bottom: 1rem;
+}
+
 .footer-head h1 {
-    color: #fff;
+    color: #bc6c25;
     font-size: 1.2rem;
-    margin-bottom: 1rem;
 }
 
 .footer-head p {
@@ -32,18 +39,20 @@
 
 .footer-social-link {
   padding: 0.5rem;
-  background-color: #1f2937;
+  background-color: #8ba72c;
+  border: 1px solid transparent;
   border-radius: 0.5rem;
-  color: #9ca3af;
-  transition: all 0.3s ease;
+  color: #012d12;
+  transition: all 0.5s ease;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .footer-social-link:hover {
-  background-color: #16a34a;
-  color: white;
+  background-color: #012d12;
+  color: #8ba72c;
+  border: 1px solid #8ba72c;
   transform: translateY(-2px);
 }
 
@@ -54,7 +63,8 @@
 .footer-links-title {
   font-weight: 600;
   margin-bottom: 1rem;
-  color: white;
+  margin-top: 1rem;
+  color: #bc6c25;
   font-size: 0.8rem;
 }
 
@@ -75,12 +85,12 @@
 }
 
 .footer-link:hover {
-  color: white;
+  color: #8ba72c;
 }
 
 .footer-separator {
   height: 1px;
-  background-color: #374151;
+  background-color: #8ba72c;
   border: none;
   margin: 2rem 0;
 }
@@ -92,7 +102,7 @@
 }
 
 .newsletter div h4 {
-    color: #fff;
+    color: #bc6c25;
 }
 
 .newsletter div p {
@@ -107,8 +117,8 @@
 
 .footer-newsletter-input {
   padding: 0.5rem 1rem;
-  background-color: #1f2937;
-  border: 1px solid #374151;
+  background-color: #012d12;
+  border: 1px solid #8ba72c;
   border-radius: 0.5rem 0 0 0.5rem;
   color: white;
   font-size: 0.875rem;
@@ -117,7 +127,7 @@
 }
 
 .footer-newsletter-input:focus {
-  border-color: #16a34a;
+  border-color: #273617;
   box-shadow: 0 0 0 2px rgba(22, 163, 74, 0.2);
 }
 
@@ -127,7 +137,7 @@
 
 .footer-newsletter-button {
   padding: 0.5rem 1.5rem;
-  background-color: #16a34a;
+  background-color: #8ba72c;
   color: white;
   border: none;
   border-radius: 0 0.5rem 0.5rem 0;

@@ -5,13 +5,14 @@
 
 .community-header h6 {
     font-size: 1rem;
-    color: #6b7280;
+    color: #8ba72c;
     font-weight: 300;
     margin-bottom: 0.6rem;
 }
 
 .community-header h1 {
     font-size: 1.8rem;
+    color: #012d12;
 }
 
 .community-details {
@@ -30,7 +31,7 @@
 }
 
 .community-details-item {
-    border: 1px solid #d1d3d7;
+    border: 1px solid #8ba72c;
     padding: 1rem;
     border-radius: 0.5rem;
     margin-bottom: 1rem;
@@ -39,11 +40,13 @@
 .community-details-item h1 {
     font-size: 1.3rem;
     margin-bottom: 1.7rem;
+    color: #012d12;
 }
 
 .community-details-item p {
     font-size: 0.9rem;
     margin-bottom: 1.6rem;
+    color: #6b7280;
 }
 
 .community-details-item div {
