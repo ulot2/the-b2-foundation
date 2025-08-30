@@ -12,45 +12,45 @@ export const Contact = () => {
   const contacts = [
     {
       method: "Email",
-      detail: "info@gmail.com",
-      href: "mailto:info@gmail.com",
+      detail: "theb2foundation.ng@gmail.com",
+      href: "mailto:theb2foundation.ng@gmail.com",
       text: "Send us a message",
       icon: <AiOutlineMail className="contact-icon" />,
     },
     {
       method: "Phone",
-      detail: "23412345678",
-      href: "tel:+23412345678",
+      detail: "2349155272256",
+      href: "tel:+2349155272256",
       text: "Call us directly",
       icon: <FiPhone className="contact-icon" />,
     },
   ];
 
   const socials = [
-    {
-      platform: "Facebook",
-      handle: "@theb2foundation",
-      href: "#",
-      icon: <SlSocialFacebook className="contact-icon" />,
-    },
+    // {
+    //   platform: "Facebook",
+    //   handle: "@theb2foundation",
+    //   href: "#",
+    //   icon: <SlSocialFacebook className="contact-icon" />,
+    // },
     {
       platform: "Instagram",
       handle: "@theb2foundation",
-      href: "#",
+      href: "https://www.instagram.com/theb2foundation?igsh=MXNhc2RoeGt6ZXkxeg%3D%3D&utm_source=qr",
       icon: <FaInstagram className="contact-icon" />,
     },
     {
       platform: "X (Twitter)",
       handle: "@theb2foundation",
-      href: "#",
+      href: "https://x.com/b2foundation?s=21",
       icon: <FaXTwitter className="contact-icon" />,
     },
-    {
-      platform: "LinkedIn",
-      handle: "@theb2foundation",
-      href: "#",
-      icon: <FiLinkedin className="contact-icon" />,
-    },
+    // {
+    //   platform: "LinkedIn",
+    //   handle: "@theb2foundation",
+    //   href: "#",
+    //   icon: <FiLinkedin className="contact-icon" />,
+    // },
   ];
 
   return (
@@ -84,7 +84,7 @@ export const Contact = () => {
           <div className="socials">
             {socials.map((social, index) => (
             <div key={index}>
-              <Link href={social.href} className="social-link">
+              <Link href={social.href} target="_blank" className="social-link">
                 <div className="contact-icon-container">
                   {social.icon}
                 </div>

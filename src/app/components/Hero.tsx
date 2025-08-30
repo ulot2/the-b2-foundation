@@ -48,7 +48,7 @@ export const Hero = () => {
 
       <div className="hero-content" style={{ transform: contentTransform }}>
         <h1>Cleaner communities, brighter futures</h1>
-        <h1>Empowring change, one action at a time</h1>
+        <h1>Empowering change, one action at a time</h1>
         <p>
           Every piece of litter picked up is a step toward a healthier planet.
           Join our welcoming community, share your story, and inspire others to
