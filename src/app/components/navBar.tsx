@@ -4,6 +4,7 @@ import "@/styles/Navbar.css";
 import { IoIosMenu } from "react-icons/io";
 import { IoCloseOutline } from "react-icons/io5";
 import Image from "next/image";
+import Link from "next/link";
 
 const navItems = [
   { href: "#about", label: "About", id: "about" },
@@ -149,7 +150,7 @@ export function Navbar() {
         {/* Desktop Navigation*/}
         <div className="nav-desktop">
           {navItems.map((item) => (
-            <a
+            <Link
               key={item.href}
               href={item.href}
               onClick={(e) => handleSmoothScroll(e, item.id)}
@@ -158,7 +159,7 @@ export function Navbar() {
               }`}
             >
               {item.label}
-            </a>
+            </Link>
           ))}
           <button className="nav-donate-button" onClick={handleDonateClick}>
             Donate
@@ -166,7 +167,7 @@ export function Navbar() {
         </div>
 
         {/* Mobile menu button */}
-        <button
+        <button type="button"
           className="nav-mobile-toggle"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           aria-label="Toggle navigation menu"
@@ -189,7 +190,7 @@ export function Navbar() {
       <div className={`nav-mobile-menu ${isMenuOpen ? "open" : "closed"}`}>
         <div className="nav-mobile-content">
           {navItems.map((item, index) => (
-            <a
+            <Link
               key={item.href}
               href={item.href}
               onClick={(e) => handleSmoothScroll(e, item.id)}
@@ -199,7 +200,7 @@ export function Navbar() {
               style={{ animationDelay: `${index * 50}ms` }}
             >
               {item.label}
-            </a>
+            </Link>
           ))}
           <button
             className="nav-mobile-donate"

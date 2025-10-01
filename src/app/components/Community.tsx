@@ -6,27 +6,33 @@ export const Community = () => {
   const community = [
     {
       title: "Neighbours making a difference",
-      desc: "Volunteering at local cleanups brought me closer to my community.Seeing our collective impact inspires me to keep going and invite others to join.",
-      src: "/images/casey.jpeg",
-      name: "Casey Brokehart",
+      desc: "Volunteering with the B2 Foundation for a cleanup has allowed me to connect with my environment in healthier ways.It has allowed me to to keep the environment as clean as possible to ensure a general healthier living environment.",
+      src: "/images/tolu.png",
+      name: "Toluwanimi Odeleye",
     },
     {
       title: "Motivated to create change",
-      desc: "Learning about environmental issues pushed me to start small events. The encouragement I found here made every step feel meaningful.",
-      src: "/images/casey.jpeg",
-      name: "Riley Chen",
-    },
-    {
-      title: "Building a legacy of care",
-      desc: "Sharing eco-friendly habits with my kids has been so fulfilling. Cleanup days are now a special family tradition we all look forward to.",
-      src: "/images/casey.jpeg",
-      name: "Skylar Patel",
+      desc: "Joining this community reminded me that small actions add up. From picking up litter to inspiring friends to also do the same, I’ve seen how consistent effort sparks real impact. This isn’t just about cleaning, it’s about caring.",
+      src: "/images/ojo.png",
+      name: "Ayooluwa Ojo",
     },
     {
       title: "Together for a cleaner tomorrow",
-      desc: "Joining this movement showed me how much one person can do. Every day, I see our efforts making a real difference.",
-      src: "/images/casey.jpeg",
-      name: "Jamie Brooks",
+      desc: "The B2 Foundation showed me that real change starts with individual responsibility and small actions that inspire others.",
+      src: "/images/dami.png",
+      name: "Damilola Ayandele",
+    },
+    {
+      title: "Building a legacy of care",
+      desc: "The B2 foundation inspired me to be a better person, I used throw dirt on the roadside before but now I'm a changed person",
+      src: "/images/josh.png",
+      name: "Joshua Ajiboye",
+    },
+    {
+      title: "Motivated to create change",
+      desc: "Volunteering with the B2 Foundation deepened my responsibility and awareness, making me more proactive about the environment.",
+      src: "/images/temi.png",
+      name: "Temiloluwa Sunmola",
     },
   ];
 

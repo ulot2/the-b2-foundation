@@ -83,7 +83,7 @@ export const About = () => {
           <div className="about-details">
             <Image
               className="about-image"
-              src="/images/hero-image.jpg"
+              src="/images/about-us.jpg"
               alt="hero image"
               width={400}
               height={300}

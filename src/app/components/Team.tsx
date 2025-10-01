@@ -5,45 +5,25 @@ import Image from "next/image";
 export const Team = () => {
   const TeamMembers = [
     {
-      name: "Alex Monroe",
-      role: "Community Engagement Lead",
-      image: "/images/img1.jpeg",
+      name: "Faith Sodiya",
+      role: "Executive Director (Founder)",
+      image: "/images/faith.png",
     },
     {
-      name: "Taylor Singh",
-      role: "Eco Education Coordinator",
-      image: "/images/img2.jpeg",
+      name: "Ayo Oshinowo",
+      role: "Community Engagement & Volunteer Coordinator",
+      image: "/images/ayo.png",
     },
     {
-      name: "Morgan Avery",
-      role: "Program Development Manager",
-      image: "/images/img3.jpeg",
+      name: "Precious Alake",
+      role: "Finance & Fundraising Lead",
+      image: "/images/precious.png",
     },
     {
-      name: "Jordan Lee",
-      role: "Sustainability Advisor",
-      image: "/images/img4.jpeg",
-    },
-    {
-      name: "Casey Morgan",
-      role: "Volunteer Coordinator",
-      image: "/images/img5.jpeg",
-    },
-    {
-      name: "Riley Bennett",
-      role: "Partnerships Manager",
-      image: "/images/img6.jpeg",
-    },
-    {
-      name: "Skylar Quinn",
-      role: "Communications Lead",
-      image: "/images/img7.jpeg",
-    },
-    {
-      name: "Drew Ellis",
-      role: "Field Operations Manager",
-      image: "/images/img8.jpeg",
-    },
+      name: "Faith Sodiya",
+      role: "Programs & Operations Lead",
+      image: "/images/faith.png",
+    }
   ];
   return (
     <section className="general-box" id="team">

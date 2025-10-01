@@ -1,75 +1,72 @@
 .about-header {
-    text-align: center;
-    margin-bottom: 3rem;
+  text-align: center;
+  margin-bottom: 3rem;
 }
 
 .about-header h1 {
-    font-size: 1.875rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-    color: #012d12;
+  font-size: 1.875rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #012d12;
 }
 
 .about-header p {
-    max-width: 42rem;
-    margin: 0 auto;
-    color: #6b7280;
-    font-size: 1.125rem;
+  max-width: 42rem;
+  margin: 0 auto;
+  color: #6b7280;
+  font-size: 1.125rem;
 }
 
 .about-mission {
-    display: flex;
-  flex-direction: row;    /* default = 2 columns (desktop/tablet) */
+  display: flex;
+  flex-direction: row; /* default = 2 columns (desktop/tablet) */
   justify-content: space-between;
   align-items: center;
-  gap: 3rem;            
+  gap: 3rem;
   /* margin: 0 auto 7rem auto; */
   margin: 0 auto;
 }
 
-/* div.about-details:first-of-type {
-  background-color: red;
-} */
-
 .about-details {
-    flex: 1;
+  flex: 1;
 }
 
 .about-mission h1 {
-    font-weight: 700;
-    margin-bottom: 1rem;
-    color: #273617;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #273617;
 }
 
 .about-mission p {
-    color: #6b7280;
-    line-height: 1.5rem;
+  color: #6b7280;
+  line-height: 1.5rem;
 }
 
 .about-mission p:first-of-type {
-    margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 
 .about-image {
-    border-radius: 0.5rem;
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
-              0 4px 6px -4px rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -4px rgba(0, 0, 0, 0.1);
+    margin-top: 3rem;
 }
 
 .about-mission-container {
-    margin-top: 3rem;
-    text-align: center;
+  margin-top: 3rem;
+  text-align: center;
 }
 
 .about-mission-header p {
-    font-size: 1.1rem;
-    text-transform: uppercase;
-    color: #8ba72c;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  color: #8ba72c;
 }
 
 .about-mission-header h1 {
-    font-size: 2rem;
-    color: #012d12;
+  font-size: 2rem;
+  color: #012d12;
 }
 
 .about-mission {
@@ -82,20 +79,19 @@
 }
 
 .item {
-    border: 1px solid #8ba72c;
-    margin-bottom: 1rem;
-    padding: 1rem;
-    border-radius: 1rem;
-     opacity: 0;
+  border: 1px solid #8ba72c;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  opacity: 0;
   /* transform: translateX(100px); */
-  transition: all 0.8s ease-out, opacity .8s ease-out;
+  transition: all 0.8s ease-out, opacity 0.8s ease-out;
 }
 
 .item.visible {
   opacity: 1;
   transform: translateX(0);
 }
-
 
 /* .item:nth-child(odd) {
   transform: translateX(2px);
@@ -131,18 +127,16 @@
 }
 
 .about-mission-icon {
-    font-size: 1.3rem;
-    margin-bottom: 10px;
-    color: #bc6c25;
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: #bc6c25;
 }
 
 .item h3 {
-    margin-bottom: 5px;
-    font-size: 1.1rem;
-    color: #273617;
+  margin-bottom: 5px;
+  font-size: 1.1rem;
+  color: #273617;
 }
-
-
 
 /* Mobile devices (up to 767px) */
 @media (max-width: 767px) {
@@ -156,7 +150,6 @@
 
   .about-mission {
     flex-direction: column;
-
   }
 
   .about-image {
@@ -168,18 +161,18 @@
   .about-mission-header h1 {
     font-size: 1.3rem;
     margin-top: 1rem;
-}
+  }
 
-.item {
-  width: 100% !important;
-  margin: 0 auto 1rem auto;
-}
+  .item {
+    width: 100% !important;
+    margin: 0 auto 1rem auto;
+  }
 }
 
 /* Tablets (768px to 1024px) */
 @media (min-width: 768px) and (max-width: 1024px) {
   .item {
-  width: 45% !important;
-  margin: 0 auto 1rem auto;
-}
+    width: 45% !important;
+    margin: 0 auto 1rem auto;
+  }
 }
